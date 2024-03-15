@@ -43,4 +43,5 @@ def view_error_500(request):
     Returns:
         HttpResponse: Réponse rendant '500.html' avec statut HTTP 500.
     """
+    print('test')
     return render(request, '500.html', status=500)
