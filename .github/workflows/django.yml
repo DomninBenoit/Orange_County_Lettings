@@ -31,6 +31,10 @@ jobs:
     - name: Set Secret Key
       run: echo "SECRET_KEY=${{ secrets.DJANGO_SECRET_KEY }}" > .env
 
+    - name: Apply migrations
+      run: |
+        python manage.py migrate
+
     - name: Lint with Flake8
       run: |
         flake8 .
