@@ -43,5 +43,5 @@ def view_error_500(request):
     Returns:
         HttpResponse: Réponse rendant '500.html' avec statut HTTP 500.
     """
-    print("Test GitHub Actions CD workflow 2")
+    print("Test GitHub Actions CD workflow")
     return render(request, '500.html', status=500)
