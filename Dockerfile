@@ -7,8 +7,7 @@ WORKDIR /app
 # Copie le fichier requirements.txt dans le conteneur
 COPY requirements.txt .
 
-ARG DJANGO_SECRET_KEY
-ENV DJANGO_SECRET_KEY=$DJANGO_SECRET_KEY
+ENV DJANGO_SECRET_KEY="$(openssl rand -base64 64)"
 
 # Install les dépendances du projet
 RUN pip install --no-cache-dir -r requirements.txt
