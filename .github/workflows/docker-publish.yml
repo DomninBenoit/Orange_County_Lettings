@@ -29,8 +29,6 @@ jobs:
         file: ./Dockerfile
         push: true
         tags: domninbenoit/orangecountylettings:latest
-        build-args: |
-          DJANGO_SECRET_KEY: ${{ secrets.DJANGO_SECRET_KEY }}
 
     - name: Image digest
       run: echo ${{ steps.build-and-push.outputs.digest }}
