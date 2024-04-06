@@ -7,6 +7,8 @@ WORKDIR /app
 # Install OpenSSL and any other dependencies
 RUN apt-get update && apt-get install -y openssl nginx
 
+ENV SECRET_KEY="$(openssl rand -base64 64)"
+
 # Copy the requirements.txt
 COPY requirements.txt .
 
