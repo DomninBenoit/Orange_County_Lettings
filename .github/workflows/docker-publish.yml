@@ -32,3 +32,9 @@ jobs:
 
     - name: Image digest
       run: echo ${{ steps.build-and-push.outputs.digest }}
+
+    # call webhook to deploy
+    - name: Call webhook
+      uses: wei/curl@v1
+      with:
+        args: -X POST ${{ secrets.RENDER_WEBHOOK_URL }}
