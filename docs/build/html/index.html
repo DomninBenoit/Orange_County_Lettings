@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html lang="fr" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Welcome to Orange_County_Lettings’s documentation! &#8212; Documentation Orange_County_Lettings 0.0.1</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
+    <script src="_static/documentation_options.js?v=5cd26065"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/translations.js?v=d99ca74e"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="welcome-to-orange-county-lettings-s-documentation">
+<h1>Welcome to Orange_County_Lettings’s documentation!<a class="headerlink" href="#welcome-to-orange-county-lettings-s-documentation" title="Link to this heading">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="description">
+<h2>Description<a class="headerlink" href="#description" title="Link to this heading">¶</a></h2>
+<p>OC Lettings is a startup specializing in real estate rental services.
+Currently in the midst of expanding operations in the United States,
+the company aims to enhance its website and deployment process
+to meet the growing needs of its clientele.
+In this regard, several key areas have been identified for improvement
+and/or addition to optimize the user experience
+and streamline internal management processes.</p>
+</section>
+<section id="project-objectives">
+<h2>Project Objectives<a class="headerlink" href="#project-objectives" title="Link to this heading">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Modular Architecture Refactoring: We aim to restructure the OC Lettings GitHub repository for better file organization and clear separation of modules and functionalities.</p></li>
+<li><p>Reduction of Technical Debts: Actions will be taken to reduce technical debts present in the project, such as code cleanup, addressing performance issues, and updating obsolete dependencies.</p></li>
+<li><p>Implementation of CI/CD Pipeline: We will establish a continuous integration and continuous deployment (CI/CD) pipeline to automate testing and code deployment, ensuring regular and reliable updates to the site.</p></li>
+<li><p>Application Monitoring with Sentry: The Sentry application monitoring service will be integrated to track errors and performance of the site in real-time, enabling quick response to any malfunctions.</p></li>
+<li><p>Creation of Technical Documentation: We will develop comprehensive technical documentation of the application using Read The Docs and Sphinx, facilitating understanding of the code and internal processes for team members and future developers.</p></li>
+</ol>
+</section>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading">¶</a></h2>
+<p>Make sure you have Python installed on your machine.</p>
+<p>Create and activate a virtual environment with the following commands:</p>
+<p>For Linux and Mac :</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">venv</span> <span class="pre">venv</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">venv/bin/activate</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-r</span> <span class="pre">requirements.txt</span></code></p>
+</div></blockquote>
+<p>For Windows :</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">venv</span> <span class="pre">venv</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">venv\Scripts\activate</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-r</span> <span class="pre">requirements.txt</span></code></p>
+</div></blockquote>
+</section>
+<section id="quickstart">
+<h2>Quickstart<a class="headerlink" href="#quickstart" title="Link to this heading">¶</a></h2>
+<section id="test-environment">
+<h3>Test Environment<a class="headerlink" href="#test-environment" title="Link to this heading">¶</a></h3>
+<p>Create .env file to add SENTRY_DSN key and SECRET_KEY key, see the following example</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">SENTRY_DSN=[&quot;insert_your_SENTRY_DSN&quot;]</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">SECRET_KEY=[&quot;insert_your_SECRET_KEY&quot;]</span></code></p>
+</div></blockquote>
+<p>Set <code class="docutils literal notranslate"><span class="pre">DEBUG</span> <span class="pre">=</span> <span class="pre">True</span></code> in settings.py</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">manage.py</span> <span class="pre">runserver</span></code></p>
+</div></blockquote>
+<p>Go to <a class="reference external" href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a></p>
+</section>
+<section id="docker-local-environment">
+<h3>Docker Local Environment<a class="headerlink" href="#docker-local-environment" title="Link to this heading">¶</a></h3>
+<p>Make sure you have the following in place before you begin deployment:</p>
+<ul class="simple">
+<li><p>An environment with Docker installed.</p></li>
+<li><p>A Docker Hub account with the necessary credentials.</p></li>
+</ul>
+<p>Set <code class="docutils literal notranslate"><span class="pre">DEBUG</span> <span class="pre">=</span> <span class="pre">False</span></code> in settings.py</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">build</span> <span class="pre">-t</span> <span class="pre">[image</span> <span class="pre">Docker</span> <span class="pre">name]</span> <span class="pre">.</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-p</span> <span class="pre">80:80</span> <span class="pre">[image</span> <span class="pre">Docker</span> <span class="pre">name]</span></code></p>
+</div></blockquote>
+<p>Go to <a class="reference external" href="http://127.0.0.1:80/">http://127.0.0.1:80/</a></p>
+<p>To stop and remove container, run the following commands</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">stop</span> <span class="pre">[container</span> <span class="pre">Docker</span> <span class="pre">name]</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">rm</span> <span class="pre">[container</span> <span class="pre">Docker</span> <span class="pre">name]</span></code></p>
+</div></blockquote>
+</section>
+</section>
+<section id="technologies-and-programming-languages">
+<h2>Technologies and Programming languages<a class="headerlink" href="#technologies-and-programming-languages" title="Link to this heading">¶</a></h2>
+<p>Python==3.11.3</p>
+<p>Django==3.0</p>
+<p>gunicorn==21.2.0</p>
+<p>nginx==1.22.1</p>
+<p>sentry-sdk==1.40.6</p>
+<dl>
+<dt><em>Services</em></dt><dd><p>Docker</p>
+<p>Github Actions</p>
+<p>Render</p>
+<p>Sentry</p>
+</dd>
+</dl>
+</section>
+<section id="models-and-database">
+<h2>Models and Database<a class="headerlink" href="#models-and-database" title="Link to this heading">¶</a></h2>
+<p>Database : SQLite3</p>
+<p><strong>Class Address</strong></p>
+<p>Fields:
+- number: PositiveIntegerField, representing the street number.
+- street: CharField, representing the street name.
+- city: CharField, representing the city name.
+- state: CharField, representing the state abbreviation.
+- zip_code: PositiveIntegerField, representing the ZIP code.
+- country_iso_code: CharField, representing the ISO code of the country.</p>
+<p><strong>Class Lettings</strong></p>
+<p>Fields:</p>
+<ul class="simple">
+<li><p>title: CharField, representing the title of the letting.</p></li>
+<li><p>address: OneToOneField, representing the address associated with the letting.</p></li>
+</ul>
+<p><strong>Class Profiles</strong></p>
+<p>Fields:
+- user: OneToOneField, representing the associated user.
+- favorite_city: CharField, representing the user’s favorite city.</p>
+</section>
+<section id="deployement">
+<h2>Deployement<a class="headerlink" href="#deployement" title="Link to this heading">¶</a></h2>
+<p>To deploy and manage the oc_letting_site application in production,
+you can follow the following steps:</p>
+<section id="deployment-steps">
+<h3>Deployment Steps<a class="headerlink" href="#deployment-steps" title="Link to this heading">¶</a></h3>
+<p>Docker Image Build: Use GitHub Actions to trigger a Docker image build whenever the source code changes in the GitHub repository.</p>
+<p>Publishing the Docker Image: After building the Docker image, publish the image to Docker Hub to make it accessible to Render.</p>
+<p>Configuring Render: Use Render to build and deploy services using the Docker image published on Docker Hub. Include steps for creating a new service on Render, linking the service to your GitHub repository, specifying which Docker image to use, and more.</p>
+<p>Continuous Deployment: Configure GitHub Actions to perform continuous deployment every time a new version of the code is pushed to the main branch of the GitHub repository. This might include steps like building the Docker image, publishing to Docker Hub, and updating the Render service.</p>
+<p>Deploy the last commit</p>
+<p>When the site is live, go to <a class="reference external" href="https://orangecountylettings-1.onrender.com/">https://orangecountylettings-1.onrender.com/</a></p>
+</section>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">Orange_County_Lettings</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, Domnin Benoit.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.2.6</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
