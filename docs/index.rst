@@ -133,6 +133,7 @@ Database : SQLite3
 **Class Address**
 
 Fields:
+
 - number: PositiveIntegerField, representing the street number.
 - street: CharField, representing the street name.
 - city: CharField, representing the city name.
@@ -152,6 +153,7 @@ Fields:
 **Class Profiles**
 
 Fields:
+
 - user: OneToOneField, representing the associated user.
 - favorite_city: CharField, representing the user's favorite city.
 
